@@ -68,7 +68,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
 [params]
   # 网站默认主题样式 ["auto", "light", "dark"]
-  defaultTheme = "auto"
+  defaultTheme = "light"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = ""
   #  哪种哈希函数用来 SRI, 为空时表示不使用 SRI
