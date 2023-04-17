@@ -61,6 +61,13 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
+      - name: Upload Records
+        uses: iChochy/Algolia-Upload-Records@main
+        env:
+          APPLICATION_ID: ${{secrets.APPLICATION_ID}}
+          ADMIN_API_KEY: ${{secrets.ADMIN_API_KEY}}
+          INDEX_NAME: ${{secrets.INDEX_NAME}}
+          FILE_PATH: ${{secrets.FILE_PATH}}
 
   # Deployment job
   deploy:
