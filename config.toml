@@ -181,9 +181,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #  是否在搜索索引中使用基于 baseURL 的绝对路径
     absoluteURL = false
     [params.search.algolia]
-      index = "index"
+      index = "blog"
       appID = "FXT6ZCRNS4"
-      searchKey = "b969fffc67336a64ff11e5e216cd21f7"
+      searchKey = "28d83dc3d1be54117022f11d8cdd4f4a"
 
   # 主页配置
   [params.home]
@@ -388,7 +388,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Disqus 评论系统设置
       [params.page.comment.disqus]
         # 
-        enable = true
+        enable = false
         # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
         shortname = "xuniyishifanchen"
       # Gitalk 评论系统设置
@@ -401,9 +401,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         clientSecret = ""
       # Valine 评论系统设置
       [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
+        enable = true
+        appId = "x59R6s7OOUPRoFBwurnZHMGM-gzGzoHsz"
+        appKey = "p4MGZERFaTs0z63NNMwvoA4q"
         placeholder = ""
         avatar = "mp"
         meta= ""
