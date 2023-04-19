@@ -9,6 +9,9 @@ lightgallery: true
 
 math:
   enable: true
+
+comment:
+  enable: false
 ---
 
 # 错的不是我，是这个世界！

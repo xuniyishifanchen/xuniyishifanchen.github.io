@@ -241,7 +241,7 @@ theme = "FixIt"
     [params.home.profile]
       enable = true
       # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = "xx@xx.com"
+      gravatarEmail = "xuniyishifanchen@gmail.com"
       # 主页显示头像的 URL
       avatarURL = "/images/avatar.png"
       #  头像菜单链接的 identifier
@@ -357,9 +357,9 @@ theme = "FixIt"
     #  是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
     #  是否使用 twemoji
-    twemoji = false
+    twemoji = true
     # 是否使用 lightgallery
-    lightgallery = false
+    lightgallery = true
     #  是否使用 ruby 扩展语法
     ruby = true
     #  是否使用 fraction 扩展语法
@@ -607,10 +607,10 @@ theme = "FixIt"
       #  Giscus 评论系统设置
       [params.page.comment.giscus]
         enable = true
-        repo = ""
-        repoId = ""
-        category = ""
-        categoryId = ""
+        repo = "xuniyishifanchen/xuniyishifanchen.github.io"
+        repoId = "R_kgDOJXIrjQ"
+        category = "General"
+        categoryId = "DIC_kwDOJXIrjc4CV5XR"
         mapping = ""
         reactionsEnabled = "1"
         emitMetadata = "0"
@@ -690,7 +690,7 @@ theme = "FixIt"
   [params.ibruce]
     enable = true
     # 在文章中开启
-    enablePost = true
+    enablePost = false
 
   # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu/360/Sogou
   [params.verification]
@@ -843,7 +843,7 @@ theme = "FixIt"
 [author]
   name = "许你一世凡尘"
   email = "xuniyishifanchen@gmail.com"
-  link = ""
+  link = "https://www.xuniyishifanchen.eu.org/"
 
 # 网站地图配置
 [sitemap]
