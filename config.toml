@@ -241,7 +241,7 @@ theme = "FixIt"
     [params.home.profile]
       enable = true
       # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = "xuniyishifanchen@gmail.com"
+      gravatarEmail = ""
       # 主页显示头像的 URL
       avatarURL = "/images/avatar.png"
       #  头像菜单链接的 identifier
