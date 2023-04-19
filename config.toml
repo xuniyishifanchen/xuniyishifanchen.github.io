@@ -65,11 +65,11 @@ theme = "FixIt"
 
 [params]
   #  FixIt 主题版本
-  version = "0.2.17" # 例如："0.2.X", "0.2.15", "v0.2.15" 等
+  version = "0.2.x" # 例如："0.2.X", "0.2.15", "v0.2.15" 等
   # 网站描述
   description = "许你一世凡尘的Blog"
   # 网站关键词
-  keywords = ["Hugo", "FixIt"]
+  keywords = ["Hugo", "FixIt", "许你一世凡尘", "Blog"]
   # 网站默认主题样式 ["light", "dark", "auto"]
   defaultTheme = "auto"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
@@ -80,11 +80,11 @@ theme = "FixIt"
   #  日期格式
   dateFormat = "2006-01-02"
   # 网站图片，用于 Open Graph 和 Twitter Cards
-  images = ["/logo.png"]
+  images = ["/images/avatar.png"]
   #  开启 PWA 支持
   enablePWA = true
   #  是否自动显示外链图标
-  externalIcon = false
+  externalIcon = true
   #  默认情况下，FixIt 只会在主页的 HTML 头中注入主题元标记
   # 您可以将其关闭，但如果您不这样做，我们将不胜感激，因为这是观察 FixIt 受欢迎程度上升的好方法
   disableThemeInject = false
@@ -188,7 +188,7 @@ theme = "FixIt"
     license = '<a rel="license external nofollow noopener noreffer" href="" target="_blank">Copyright Healer Corporation.</a>'
     #  网站创立时间
     [params.footer.siteTime]
-      enable = true
+      enable = false
       animate = true
       icon = "fa-solid fa-heartbeat"
       pre = ""
@@ -227,7 +227,7 @@ theme = "FixIt"
 
   #  标签云配置
   [params.tagcloud]
-    enable = false
+    enable = true
     min = 14 # 最小字体大小，单位：px
     max = 32 # 最大字体大小，单位：px
     peakCount = 10 # 每个标签的最大文章数
@@ -367,7 +367,7 @@ theme = "FixIt"
     #  是否使用 fontawesome 扩展语法
     fontawesome = true
     # 许可协议信息（支持 HTML 格式）
-    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    license = '<a rel="license external nofollow noopener noreffer" href="" target="_blank">Copyright Healer Corporation.</a>'
     # 是否在文章页面显示原始 Markdown 文档链接
     linkToMarkdown = false
     #  是否在 RSS 中显示全文内容
@@ -384,7 +384,7 @@ theme = "FixIt"
     #  是否使用 预计阅读
     readingTime = true
     #  文章结束标志
-    endFlag = ""
+    endFlag = "感觉您的阅读，祝您生活愉快~~~"
 
     #  转载配置
     [params.page.repost]
@@ -455,14 +455,14 @@ theme = "FixIt"
       fullscreen = true
     #  赞赏设置
     [params.page.reward]
-      enable = false
-      animation = false
+      enable = true
+      animation = true
       # 相对于页脚的位置，可选值：["before", "after"]
       position = "after"
       # comment = "Buy me a coffee"
       [params.page.reward.ways]
-        # wechatpay = "/images/wechatpay.png"
-        # alipay = "/images/alipay.png"
+        wechatpay = "/images/wechatpay.png"
+        alipay = "/images/alipay.png"
         # paypal = "/images/paypal.png"
         # bitcoin = "/images/bitcoin.png"
     #  文章页面的分享信息设置
@@ -470,8 +470,8 @@ theme = "FixIt"
       enable = true
       Twitter = true
       Facebook = true
-      Linkedin = false
-      Whatsapp = false
+      Linkedin = true
+      Whatsapp = true
       Pinterest = false
       Tumblr = false
       HackerNews = false
