@@ -3,7 +3,7 @@
 ## 依赖
 框架：[Hugo](https://github.com/gohugoio/hugo)
 
-主题：[LoveIt](https://github.com/dillonzq/LoveIt)
+主题：[FixIt](https://github.com/hugo-fixit/FixIt)
 
 ## 部署
 自动化部署：Github Actions
