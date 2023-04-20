@@ -384,7 +384,7 @@ theme = "FixIt"
     #  是否使用 预计阅读
     readingTime = true
     #  文章结束标志
-    endFlag = "感觉您的阅读，祝您生活愉快~~~"
+    endFlag = "感谢您的阅读，祝您生活愉快~~~"
 
     #  转载配置
     [params.page.repost]

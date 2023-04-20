@@ -1,5 +1,5 @@
 ---
-title: "Live Template"
+title: "Android 快捷键模板"
 date: 2023-04-18T22:28:18+08:00
 draft: false
 
@@ -12,7 +12,9 @@ tags: ["android", "快捷键"]
 categories: ["快捷键模板"]
 ---
 
-# Android 快捷键
+# Android 快捷键模板
+
+{{< youtube HhBnNJqvzco >}}
 
 ## 1. hiltvm (applicable in top-level)
 ```kotlin
