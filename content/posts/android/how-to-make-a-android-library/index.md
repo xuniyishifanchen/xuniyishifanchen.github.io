@@ -9,7 +9,7 @@ math:
   enable: true
 
 tags: ["android"]
-categories: ["android lib"]
+categories: ["android"]
 ---
 
 # 构建自己的android lib库
