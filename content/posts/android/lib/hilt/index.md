@@ -12,12 +12,10 @@ tags: ["android", "lib"]
 categories: ["android lib"]
 ---
 
-# [Hilt](https://developer.android.google.cn/training/dependency-injection/hilt-android)
+## 1 About [Hilt](https://developer.android.google.cn/training/dependency-injection/hilt-android)
+>基于dagger2由google针对android平台开发的一个依赖注入库。
 
-## 1 简介
-基于dagger2由google针对android平台开发的一个依赖注入库。
-
-## 2 使用方法
+## 2 基本使用方法
 ### 2.1 在项目根级gradle添加class 插件
 ```groovy
 plugins {
@@ -33,10 +31,6 @@ plugins {
   id 'com.google.dagger.hilt.android'
 }
 
-android {
-  ...
-}
-
 dependencies {
   implementation "com.google.dagger:hilt-android:2.44"
   kapt "com.google.dagger:hilt-compiler:2.44"
@@ -48,7 +42,7 @@ kapt {
 }
 ```
 
-### 2.3 创建Application并添加`@HiltAndroidApp`注解
+### 2.3 创建Application并添加`@HiltAndroidApp`注解,并在`AndroidManifest.xml`注册
 ```kotlin
 @HiltAndroidApp
 class HiltApp : Application()
@@ -62,11 +56,10 @@ class MainActivity : ComponentActivity() {
 }
 ```
 
-### 2.5 `@Provider`方式创建module
+### 2.5 使用`@Provider`注入实例
 ```kotlin
 @InstallIn(SingletonComponent::class)
 @Module
-@InstallIn(ApplicationComponent::class)
 class ApplicationModule {
 
     @Provides
@@ -106,7 +99,7 @@ class ApplicationModule {
 }
 ```
 
-### 2.6 `@bind`方式实现接口mudule
+### 2.6 使用`@bind`注入接口实例
 ```kotlin
 interface AnalyticsService {
   fun analyticsMethods()
@@ -145,24 +138,44 @@ object DataModule{
 
     @LocalData
     @Provides
-    fun provideLocalData() = 1
+    fun provideLocalData() = "LocalData"
 
     @RemoteData
     @Provides
-    fun provideRemoteData() = 2
+    fun provideRemoteData() = "RemoteData"
 }
 ```
 
-### 2.8 构造函数inject
+### 2.8 构造函数注入
 ```kotlin
 class User @Inject constructor()
 ```
 
-### 2.9 依赖注入
+### 2.9 使用`@Inject`注入User对象
 ```kotlin
     @Inject
     lateinit var user: User
 
     @Inject
     lateinit var user2: User
+```
+
+## 3 和`viewModel` 搭配使用
+>提供 ViewModel，方法是为其添加 @HiltViewModel 注解，并在 ViewModel 对象的构造函数中使用 @Inject 注解
+```kotlin
+@HiltViewModel
+class ExampleViewModel @Inject constructor(
+  private val savedStateHandle: SavedStateHandle,
+  private val repository: ExampleRepository
+) : ViewModel() {
+  ...
+}
+```
+
+```kotlin
+@AndroidEntryPoint
+class ExampleActivity : AppCompatActivity() {
+  private val exampleViewModel: ExampleViewModel by viewModels()
+  ...
+}
 ```

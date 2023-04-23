@@ -12,14 +12,15 @@ tags: ["android", "lib"]
 categories: ["android lib"]
 ---
 
-# [Ktlint](https://github.com/JLLeitschuh/ktlint-gradle)
+## 1 About [Ktlint](https://github.com/JLLeitschuh/ktlint-gradle)
+>一个kotlin代码格式化插件
 
-## [教学视频](https://www.youtube.com/watch?v=hSgPNbEcX98)
+{{<youtube hSgPNbEcX98>}}
 
-## [非官方插件](https://plugins.jetbrains.com/plugin/15057-ktlint-unofficial-)
+## 2[非官方Android Studio插件](https://plugins.jetbrains.com/plugin/15057-ktlint-unofficial-)
 
-## 1 配置
-### 1.1 在gradle 中配置插件
+## 3 配置
+### 3.1 在`app`模块`build.gradle`中配置插件
 ```groovy
 plugins {
     id 'com.android.application'
@@ -29,7 +30,7 @@ plugins {
 
 ```
 
-### 1.2. 配置使用参数
+### 3.2. 在`app`模块`build.gradle`配置使用参数
 ```groovy
 ktlint {
     android = true
@@ -45,16 +46,16 @@ ktlint {
 
 ```
 
-### 1.3. 运行代码检查
+### 3.3. 运行检查代码格式错误
 ```shell
 ./gradlew ktlintCheck  
 ```
 
-### 1.4. 自动格式化
+### 3.4. 自动格式化代码
 ```shell
 ./gradlew ktlintFormat  
 ```	
-### 1.5. gradle编译时自动格式化
+### 3.5. 在`app`模块`build.gradle`配置编译时自动格式化
 ```groovy
 tasks.getByPath("preBuild").dependsOn("ktlintFormat")
 ```

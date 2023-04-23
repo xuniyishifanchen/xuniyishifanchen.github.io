@@ -416,7 +416,7 @@ theme = "FixIt"
       #  是否显示代码块的编辑按钮
       edit = false
       # 默认展开显示的代码行数
-      maxShownLines = 10
+      maxShownLines = 80
     #  文章编辑
     [params.page.edit]
       enable = false
