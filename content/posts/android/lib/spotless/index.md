@@ -139,3 +139,4 @@ fun Project.configureAndroidProject() {
 ```shell
 ./gradlew spotlessApply  
 ```	
+参考github： <https://github.com/xuniyishifanchen/Wy/blob/master/build.gradle.kts>
