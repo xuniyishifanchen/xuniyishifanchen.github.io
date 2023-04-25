@@ -42,6 +42,6 @@ repo start master --all
 sudo apt-get install make
 sudo apt install python-pip
 pip install lxml
-sudo apt-get install python_apt
+sudo apt-get install python-apt
 sudo apt-get install python-debian
 ```
