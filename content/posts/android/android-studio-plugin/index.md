@@ -9,7 +9,7 @@ math:
   enable: true
 
 tags: ["android", "plugin"]
-categories: ["android studio plugin"]
+categories: ["android"]
 ---
 
 # Android Studio 插件

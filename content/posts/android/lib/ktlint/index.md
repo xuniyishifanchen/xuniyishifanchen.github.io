@@ -3,13 +3,12 @@ title: "Android lib - Ktlint"
 date: 2023-04-17T01:28:47+08:00
 draft: false
 
-lightgallery: true
+tags: 
+  - android
+  - lib
 
-math:
-  enable: true
-
-tags: ["android", "lib"]
-categories: ["android lib"]
+categories:
+  - android lib
 ---
 
 ## 1 About [Ktlint](https://github.com/JLLeitschuh/ktlint-gradle)

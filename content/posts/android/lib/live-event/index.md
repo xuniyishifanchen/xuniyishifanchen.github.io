@@ -3,19 +3,16 @@ title: "Android lib - Live Event"
 date: 2023-04-18T22:24:11+08:00
 draft: false
 
-lightgallery: true
+tags: 
+  - android
+  - lib
 
-math:
-  enable: true
-
-tags: ["android", "lib"]
-categories: ["android lib"]
+categories:
+  - android lib
 ---
 
-# [LiveEvent](https://github.com/hadilq/LiveEvent)
-
-## 1. 简介
->一个用于mvvm架构监听事件的类
+## 1. About [LiveEvent](https://github.com/hadilq/LiveEvent)
+>一个用于mvvm架构监听事件的类，目前可以使用MutableSharedFlow代替。
 
 ## 2. 使用方法
 ```kotlin

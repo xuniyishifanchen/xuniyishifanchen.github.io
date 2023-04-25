@@ -9,7 +9,7 @@ math:
   enable: true
 
 tags: ["android", "扩展函数"]
-categories: ["android 扩展函数"]
+categories: ["android"]
 ---
 
 # 实用的扩展函数

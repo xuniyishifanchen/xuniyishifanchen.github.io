@@ -3,13 +3,12 @@ title: "Android lib - Spotless"
 date: 2023-04-17T01:28:48+08:00
 draft: false
 
-lightgallery: true
+tags: 
+  - android
+  - lib
 
-math:
-  enable: true
-
-tags: ["android", "lib"]
-categories: ["android lib"]
+categories:
+  - android lib
 ---
 
 ## 1 About [Spotless](https://github.com/diffplug/spotless)
