@@ -1,5 +1,5 @@
 ---
-title: "Update Copyright"
+title: "Linux Script - Update Copyright"
 date: 2023-04-18T23:28:03+08:00
 draft: false
 
@@ -12,7 +12,7 @@ tags: ["linux", "script"]
 categories: ["shell script"]
 ---
 
-# 更新copyright 脚本
+## 1 更新copyright 脚本
 
 ```shell
 #!/bin/bash
@@ -49,6 +49,9 @@ if [[ $FILES_NEED_MANUAL_UPDATE ]]; then
 fi
 ```
 
+## 2 Android Studio新建文件自动生成copyright方法
+>1. Settings->Editor->Copyright->Copyright Profile 创建copyright文件。
+>2. Settings->Editor->Copyright 设置copyright作用范围。
 ```java
 Copyright "$today.year" Healer Corporation.
 ```

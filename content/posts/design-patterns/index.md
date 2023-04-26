@@ -11,9 +11,6 @@ math:
 tags: ["android", "设计模式"]
 categories: ["设计模式"]
 ---
-
-# 设计模式
-
 ## 学习网站
 1. https://refactoring.guru/design-patterns
 

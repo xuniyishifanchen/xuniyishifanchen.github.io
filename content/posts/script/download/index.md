@@ -1,5 +1,5 @@
 ---
-title: "Download"
+title: "Linux Script - Download"
 date: 2023-04-18T23:26:28+08:00
 draft: false
 
@@ -12,13 +12,15 @@ tags: ["linux", "script"]
 categories: ["shell script"]
 ---
 
-# 断点续传下载脚本
+# 1 axel下载脚本
 
 ## dl.sh
+### 使用方法
 ```shell
 dl url
 ```
 
+### 脚本源码
 ```shell
 #!/bin/bash
 
@@ -36,12 +38,14 @@ else
     echo "Please input download url!"
 fi
 ```
-
+# 2 断点续传下载脚本
 ## curl.py
 
+### 使用方法
 ```shell
 ./curl.py --jobs 8 --url downloadLink
 
+### 脚本源码
 ```
 ```python
 #!/usr/bin/python3

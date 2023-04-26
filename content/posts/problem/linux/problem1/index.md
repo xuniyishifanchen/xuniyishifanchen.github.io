@@ -12,9 +12,6 @@ tags: ["linux", "problem"]
 categories: ["疑难问题"]
 ---
 
-
-# Ubuntu 18.04 卸载python3后进不去图形界面解决方法
-
 ## 1. 确保网络连接正常
 ```
 ip addr

@@ -1,5 +1,5 @@
 ---
-title: "How to Make a Android Library"
+title: "如何构建自己的android lib库"
 date: 2023-04-18T23:13:11+08:00
 draft: false
 
@@ -12,9 +12,7 @@ tags: ["android"]
 categories: ["android"]
 ---
 
-# 构建自己的android lib库
-
-[教学视频](https://www.youtube.com/watch?v=EzC-FXeZiIk)
+{{<youtube EzC-FXeZiIk>}}
 
 ## 1. 创建自己的android module
 
@@ -43,9 +41,7 @@ afterEvaluate {
 
 ## 3. 上传到 https://jitpack.io/
 
-# 如何使用
-
-## 1. 配置gradle引用
+### 配置gradle引用
 ``` groovy
 	allprojects {
 		repositories {
