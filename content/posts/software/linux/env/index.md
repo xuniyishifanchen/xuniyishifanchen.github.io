@@ -71,5 +71,23 @@ alias dc="adb shell dumpsys media.camera > dumpsys.txt"
 alias dcd="adb shell dumpsys media.camera | grep -E \"Device 0|Device 1|Device 2|Device 3|Device 4|Device 5\"" 
 ```
 
+## java 环境配置
+### java 8
+```
+sudo apt-get install openjdk-8-jdk
+```
+### java 11
+```
+sudo apt-get install openjdk-11-jdk
+```
+### java 环境切换
+```
+sudo update-alternatives --config java
+```
+### 配置JAVA 使用ipv6：
+```
+export JAVA_TOOL_OPTIONS='-Djava.net.preferIPv6Addresses=true'
+export JAVA_OPTS='-Djava.net.preferIPv6Addresses=true'
+```
 
 

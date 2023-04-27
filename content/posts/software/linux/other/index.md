@@ -1,5 +1,5 @@
 ---
-title: "linux 软件"
+title: "Linux Software - linux 常用软件"
 date: 2023-04-19T00:06:17+08:00
 draft: false
 
@@ -15,8 +15,10 @@ categories: ["linux software"]
 ## GNOME Tweaks 显示周数的软件
 ```
 sudo apt-get install gnome-tweaks
-info : Top bar -> week number
 ```
+{{< admonition tip>}}
+设置显示周数: info -> Top bar -> week number
+{{< /admonition >}}
 
 ## vim
 ```
@@ -63,23 +65,4 @@ c) 在程序屋中找到Fcitx Configure 配置搜狗输入发
 d）setting -> Region & Language -> 安装语言
 e）将keyboard input method system 配置成fctix
 f) 重启电脑
-```
-
-## java 环境配置
-### java 8
-```
-sudo apt-get install openjdk-8-jdk
-```
-### java 11
-```
-sudo apt-get install openjdk-11-jdk
-```
-### java 环境切换
-```
-sudo update-alternatives --config java
-```
-### 配置JAVA 使用ipv6：
-```
-export JAVA_TOOL_OPTIONS='-Djava.net.preferIPv6Addresses=true'
-export JAVA_OPTS='-Djava.net.preferIPv6Addresses=true'
 ```
