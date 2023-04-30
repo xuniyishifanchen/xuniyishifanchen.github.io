@@ -1,5 +1,5 @@
 ---
-title: "Adb"
+title: "Linux Software - Adb"
 date: 2023-04-19T00:08:54+08:00
 draft: false
 
@@ -25,8 +25,7 @@ adb install -d -r -t xxxx.apk
 ## 卸载应用
 ```
 adb uninstall package_name
-```
-```
+or
 adb shell pm uninstall packagename
 ```
 
@@ -38,7 +37,7 @@ adb reboot
 adb remount
 ```
 
-## 低电
+## 发送低电广播
 ```
 adb shell am broadcast -a android.intent.action.BATTERY_CHANGED --ei level 5
 ```
@@ -64,7 +63,7 @@ adb shell  dumpsys activity | grep mResumedActivity
 adb shell  dumpsys activity | grep mResumedActivity
 adb shell pm list packages
 adb shell pm path "packageName"
-adb pull
+adb pull "apk path"
 ```
 
 ## 查看jobscheduler信息
@@ -78,6 +77,7 @@ adb shell dumpsys window displays
 ```
 
 ## 查看相机信息
+<https://source.android.com/docs/core/camera/debugging?hl=zh-cn>
 ```
 adb shell dumpsys media.camera
 ```
@@ -103,5 +103,5 @@ adb shell input keyevent 4
 ```
 ## 模拟文字输入
 ```
-adb shell imput text "xxx"
+adb shell input text "xxx"
 ```

@@ -1,5 +1,5 @@
 ---
-title: "Repo"
+title: "Linux Software - Repo"
 date: 2023-04-19T00:09:20+08:00
 draft: false
 
@@ -14,7 +14,7 @@ categories: ["linux cmd"]
 
 # repo 命令
 
-## 下载mirror 提高之后下载速度
+## 下载mirror提高之后下载速度
 ```
 repo init -u git:xxx/manifest -b branch –-mirror
 ```

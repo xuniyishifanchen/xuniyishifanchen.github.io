@@ -1,5 +1,5 @@
 ---
-title: "Other"
+title: "Linux Software - 环境配置"
 date: 2023-04-19T00:09:25+08:00
 draft: false
 
@@ -12,10 +12,15 @@ tags: ["linux", "cmd"]
 categories: ["linux cmd"]
 ---
 
-## 更新apt 源
-> sudo apt-get update
+## 更新apt源
+```
+sudo apt-get update
+```
 
 ## apt 阿里源
+```
+vi /etc/apt/sources.list
+```
 ```
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse

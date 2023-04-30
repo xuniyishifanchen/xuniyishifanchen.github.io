@@ -1,5 +1,5 @@
 ---
-title: "Linux Software - linux 常用软件"
+title: "Linux Software - 常用软件"
 date: 2023-04-19T00:06:17+08:00
 draft: false
 

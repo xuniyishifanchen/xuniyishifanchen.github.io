@@ -1,63 +1,75 @@
 ---
-title: "Vps Config"
+title: "Vps 环境搭建"
 date: 2023-04-18T23:48:01+08:00
-draft: true
+draft: false
+tags: ["linux", "vpn"]
+password: 12138
 ---
+{{<youtube s90feRmdr9A>}}
+## 1 启用root账户并开启密码登陆：
 
-## 启用root账户开启密码登陆用到的命令：
-
+### 切换到root用户：
 ```
-切换到root用户：sudo -i
-编辑配置文件：vim /etc/ssh/sshd_config
- 修改参数：PermitRootLogin
- 修改参数：PasswordAuthentication
- 
-修改密码：passwd
-重启ssh服务：systemctl restart ssh
+sudo -i
+```
+### 编辑配置文件：
+```
+vim /etc/ssh/sshd_config
+修改参数：PermitRootLogin
+修改参数：PasswordAuthentication
+```
+### 修改密码：
+```
+passwd
+```
+### 重启ssh服务：
+```
+systemctl restart ssh
 ```
 
-## 域名购买: https://www.namesilo.com/
+## 2 购买域名: <https://www.namesilo.com/>
 
-## 升级bbr plus 内核：https://github.com/jinwyp/one_click_script
+## 3 升级linux bbr plus内核：
+>https://github.com/jinwyp/one_click_script
 ```bash
 bash <(curl -Lso- https://git.io/kernel.sh)
 ```
 
-# 节点搭建：
-## 更新软件源
+## 4 节点搭建：
+### 更新软件源
 ```bash	
 apt update
 ```
-## 安装x-ui：
+### 安装x-ui，并切换xray内核到最新版本：
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
-## 安装nginx
+### 安装nginx
 ```bash
 apt install nginx
 ```
-## 安装acme：
+### 安装acme：
 ```bash
 curl https://get.acme.sh | sh
 ```
-## 添加软链接：
+### 添加软链接：
 ```bash
 ln -s  /root/.acme.sh/acme.sh /usr/local/bin/acme.sh
 ```
-## 切换CA机构：
+### 切换CA机构：
 ```bash
 acme.sh --set-default-ca --server letsencrypt
 ```
-## 申请证书：
+### 申请证书：
 ```bash
 acme.sh  --issue -d 你的域名 -k ec-256 --webroot  /var/www/html
 ```
-## 安装证书：
+### 安装证书：
 ```bash
 acme.sh --install-cert -d 你的域名 --ecc --key-file       /etc/x-ui/server.key  --fullchain-file /etc/x-ui/server.crt --reloadcmd     "systemctl force-reload nginx"
 ```
 
-## 配置 nginx
+### 配置 nginx
 ```bash
 vim /etc/nginx/nginx.conf
 ```
@@ -142,56 +154,147 @@ http {
     }
 }
 ```
-## 重新加载nginx:
+### 重新加载nginx:
 ```bash
 systemctl reload nginx
 ```
-## 下载检测解锁netflix 程序：
+
+## 5 netflix 解锁
+### 下载检测解锁netflix 程序：
 ```bash
 wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/v3.1.0/nf_linux_amd64 && chmod +x nf
 ```
-## 执行
+### 检测解锁情况
 ```bash
 ./nf
 ```
-## 通过代理执行
+### 通过代理检查解锁情况
 ```bash
 ./nf -proxy socks5://127.0.0.1:40000
 ```
 
-# 使用 wrap 代理nf
+## 6 使用wrap代理
+>官方教程：<https://pkg.cloudflareclient.com/install>
 
-## 官方教程：https://pkg.cloudflareclient.com/install
-
-## 安装WARP仓库GPG 密钥：
+### 安装WARP仓库GPG 密钥：
 ```bash
 curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
 ```
-## 添加WARP源：
+### 添加WARP源：
 ```bash
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
 ```
-## 更新APT缓存：
+### 更新APT缓存：
 ```bash
 apt update
 ```
-## 安装WARP：
+### 安装WARP：
 ```bash
 apt install cloudflare-warp
 ```
-## 注册WARP：
+### 注册WARP：
 ```bash
 warp-cli register
 ```
-## 设置为代理模式（一定要先设置）：
+### 设置为代理模式（一定要先设置）：
 ```bash
 warp-cli set-mode proxy
 ```
-## 连接WARP：
+### 连接WARP：
 ```bash
 warp-cli connect
 ```
-## 查询代理后的IP地址：
+### 查询代理后的IP地址：
+>wrap 默认代理40000端口
 ```bash
 curl ifconfig.me --proxy socks5://127.0.0.1:40000
+```
+
+### 修改xui的xray配置并重启面板，让某些网站走wrap代理
+```
+{
+  "api": {
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "tag": "api"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "netflix_proxy",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "127.0.0.1",
+            "port": 40000
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "policy": {
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true
+    }
+  },
+  "routing": {
+    "rules": [
+    {
+        "type": "field",
+        "outboundTag": "netflix_proxy",
+        "domain": [
+          "geosite:netflix",
+          "geosite:disney",
+          "geosite:openai"
+        ]
+      },
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      }
+    ]
+  },
+  "stats": {}
+}
 ```
