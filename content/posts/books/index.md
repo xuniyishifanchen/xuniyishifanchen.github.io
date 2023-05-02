@@ -2,6 +2,9 @@
 title: "Books"
 date: 2023-04-18T23:44:03+08:00
 draft: false
+
+tags: ["books"]
+categories: ["books"]
 ---
 
 1. [大话设计模式](/pdf/大话设计模式.pdf)

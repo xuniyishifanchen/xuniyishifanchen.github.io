@@ -1,5 +1,7 @@
 # 许你一世凡尘`s Blog
 
+![blog-flow](/static/images/blog-flow.png)
+
 ## 依赖
 框架：[Hugo](https://github.com/gohugoio/hugo)
 

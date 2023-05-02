@@ -3,6 +3,7 @@ title: "Vps 环境搭建"
 date: 2023-04-18T23:48:01+08:00
 draft: false
 tags: ["linux", "vpn"]
+categories: ["vpn"]
 password: 12138
 ---
 {{<youtube s90feRmdr9A>}}
