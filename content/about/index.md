@@ -16,5 +16,6 @@ comment:
 
 # 错的不是我，是这个世界！
 ![错的不是我，是这个世界！](/images/about_cover.jpg "")
+
 {{< music url="/music/background_music.mp3" name=许你一世凡尘 artist=许你一世凡尘 cover="/images/music_cover.jpg" autoplay="true" mini="true" fixed="true">}}
 
