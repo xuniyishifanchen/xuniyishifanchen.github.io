@@ -228,8 +228,8 @@ theme = "FixIt"
   #  标签云配置
   [params.tagcloud]
     enable = true
-    min = 14 # 最小字体大小，单位：px
-    max = 32 # 最大字体大小，单位：px
+    min = 24 # 最小字体大小，单位：px
+    max = 42 # 最大字体大小，单位：px
     peakCount = 10 # 每个标签的最大文章数
     orderby = "name" # 标签排序方式，可选值：["name", "count"]
 
@@ -626,7 +626,7 @@ theme = "FixIt"
         # 或者
         # someCSS = "https://cdn.example.com/some.css"
       [params.page.library.js]
-        # someJavascript = "some.js"
+        # someJavascript = "fish.js"
         # 位于 "assets/"
         # 或者
         # someJavascript = "https://cdn.example.com/some.js"
