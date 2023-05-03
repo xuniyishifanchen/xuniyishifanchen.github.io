@@ -247,7 +247,7 @@ theme = "FixIt"
       #  头像菜单链接的 identifier
       avatarMenu = ""
       #  主页显示的网站标题（支持 HTML 格式）
-      title = "躺平青年"
+      title = "许你一世凡尘"
       # 主页显示的网站副标题
       subtitle = "一个咸鸭蛋：理想是很闲但富得流油~"
       # 是否为副标题显示打字机动画
