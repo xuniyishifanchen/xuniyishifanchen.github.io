@@ -142,7 +142,6 @@ var RENDERER = {
 		requestAnimationFrame(this.render);
 		this.controlStatus();
 		this.context.clearRect(0, 0, this.width, this.height);
-		this.context.fillStyle = 'hsl(0, 0%, 95%)';
 		
 		for(var i = 0, count = this.fishes.length; i < count; i++){
 			this.fishes[i].render(this.context);
@@ -157,6 +156,7 @@ var RENDERER = {
 		}
 		this.context.lineTo(this.width, this.reverse ? 0 : this.height);
 		this.context.closePath();
+		this.context.fillStyle = 'hsl(197,15%,32%)';	//底部波浪颜色
 		this.context.fill();
 		this.context.restore();
 	}
@@ -293,6 +293,7 @@ FISH.prototype = {
 		context.moveTo(-30, 0);
 		context.bezierCurveTo(-20, 15, 15, 10, 40, 0);
 		context.bezierCurveTo(15, -10, -20, -15, -30, 0);
+		context.fillStyle = 'hsl(210, 13%, 50%)';	//鱼身
 		context.fill();
 		
 		context.save();
@@ -304,6 +305,7 @@ FISH.prototype = {
 		context.quadraticCurveTo(12, 5, 10, 0);
 		context.quadraticCurveTo(12, -5, 20, -8);
 		context.quadraticCurveTo(5, -10, 0, 0);
+		context.fillStyle = 'hsl(200,23%,55%)';	//鱼尾
 		context.fill();
 		context.restore();
 		
@@ -323,13 +325,13 @@ FISH.prototype = {
 			context.bezierCurveTo(12, -25, 8, -10, 0, 0);
 		}
 		context.closePath();
+		context.fillStyle = 'hsl(210, 13%, 50%)';	//鱼鳍
 		context.fill();
 		context.restore();
 		context.restore();
 		this.controlStatus(context);
 	}
 };
-console.log("fish")
 $(function(){
 	RENDERER.init();
 });
