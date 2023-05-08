@@ -16,8 +16,8 @@ sudo -i
 ### 编辑配置文件：
 ```
 vim /etc/ssh/sshd_config
-修改参数：PermitRootLogin
-修改参数：PasswordAuthentication
+修改参数：PermitRootLogin yes
+修改参数：PasswordAuthentication yes
 ```
 ### 修改密码：
 ```
@@ -25,7 +25,7 @@ passwd
 ```
 ### 重启ssh服务：
 ```
-systemctl restart ssh
+systemctl restart sshd
 ```
 
 ## 2 购买域名: <https://www.namesilo.com/>
@@ -44,6 +44,14 @@ apt update
 ### 安装x-ui，并切换xray内核到最新版本：
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+```
+魔改版
+<https://github.com/sing-web/x-ui>
+<https://github.com/MHSanaei/3x-ui>
+<https://github.com/FranzKafkaYu/x-ui>
+
+```
+bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
 ```
 ### 安装nginx
 ```bash
