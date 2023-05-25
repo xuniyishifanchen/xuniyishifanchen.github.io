@@ -8,8 +8,13 @@ password: 12138
 ---
 
 ## DD脚本
+““需要删除
 ```
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p "密码" -port "端口"
+```
+eg:
+```
+bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p 19950122Vps. -port 22
 ```
 教程:
 
