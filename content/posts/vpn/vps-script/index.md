@@ -8,6 +8,20 @@ password: 12138
 ---
 
 ## DD脚本
+leitbogioro大佬的
+<https://hostloc.com/thread-1159839-1-1.html>
+
+<https://github.com/leitbogioro/Tools>
+```
+wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh' && chmod a+x InstallNET.sh
+```
+```
+bash InstallNET.sh -debian 11 -pwd 'Vps.' -port "22"
+```
+
+萌咖大佬的《一键 DD Linux 系统脚本》
+<https://meledee.com/2022/12/4112.html>
+
 ““需要删除
 ```
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p "密码" -port "端口"
@@ -15,15 +29,6 @@ bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeCl
 eg:
 ```
 bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 11 -v 64 -p 19950122Vps. -port 22
-```
-教程:
-
-<https://hostloc.com/thread-1159839-1-1.html>
-
-<https://github.com/leitbogioro/Tools>
-```
-wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh' && chmod a+x InstallNET.sh
-bash InstallNET.sh -debian 11 -pwd '密码' -port "端口"
 ```
 
 ## bbr plus
@@ -68,4 +73,9 @@ bash <(curl -L -s check.unlock.media)
 <https://github.com/LovelyHaochi/StreamUnlockTest>
 ```
 bash <(curl -sSL "https://git.io/JswGm")
+```
+
+## 融合怪<https://github.com/spiritLHLS/ecs>
+```
+bash <(wget -qO- bash.spiritlhl.net/ecs)
 ```
