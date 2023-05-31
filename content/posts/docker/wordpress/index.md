@@ -33,7 +33,7 @@ services:
   db:
     image: mysql:5.7
     volumes:
-      - db_data:/var/lib/mysql
+      - ./db_data:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
@@ -46,7 +46,7 @@ services:
       - db
     image: wordpress:latest
     volumes:
-      - wordpress_data:/var/www/html
+      - ./wordpress_data:/var/www/html
     ports:
       - "8000:80"
     restart: always
@@ -55,9 +55,6 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
-volumes:
-  db_data: {}
-  wordpress_data: {}
 ```
 
 ## 3 启动

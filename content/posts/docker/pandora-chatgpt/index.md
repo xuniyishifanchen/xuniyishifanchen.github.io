@@ -12,7 +12,7 @@ tags: ["Docker"]
 categories: ["Docker"]
 ---
 
-# Docker 搭建pandora chatgpt
+# Docker 搭建Pandora chatgpt
 <https://github.com/pengzhile/pandora>
 
 ## 1 docker环境配置
