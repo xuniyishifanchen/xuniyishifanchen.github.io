@@ -45,6 +45,7 @@ proxy-groups:
       - akile-us-nrr
       - cf-worker
       - replit-vless
+      - wireguard
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
