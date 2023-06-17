@@ -23,11 +23,11 @@ dns:
 
 proxies:
   - {"name":"aws-sg","type":"vless","server":"18.141.222.81","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"www.microsoft.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
-  - {"name":"hytron-hk-nrr","type":"ss","server":"183.56.223.220","port":45000,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
+  - {"name":"hytron-hk-nnr","type":"ss","server":"183.56.223.220","port":45000,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk","type":"vless","server":"89.185.30.156","port":443,"udp":true,"uuid":"a2cf3ea0-1e0f-4e20-f996-b1355517dc18","tls":true,"servername":"www.microsoft.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"},"client-fingerprint":"chrome"}
-  - {"name":"kurun-us-nrr","type":"ss","server":"183.56.223.220","port":26133,"password":"N2Z1IZ5zgxusDXpLo0jxzaB7O0OE0Ztq6uLqMwtAP5UQ","cipher":"aes-256-gcm"}
+  - {"name":"kurun-us-nnr","type":"ss","server":"183.56.223.220","port":26133,"password":"N2Z1IZ5zgxusDXpLo0jxzaB7O0OE0Ztq6uLqMwtAP5UQ","cipher":"aes-256-gcm"}
   - {"name":"akile-us","type":"vmess","server":"111.healer.cloud","port":443,"cipher":"auto","uuid":"100ebb74-4bdb-4d0c-c43b-6cff75351ae8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"akile-us-nrr","type":"ss","server":"183.56.223.220","port":26100,"password":"59MdnroHjuJKJ05rGrZkbcSNcCmEopL0TV0Yk6OnPQQf","cipher":"aes-256-gcm"}
+  - {"name":"akile-us-nnr","type":"ss","server":"183.56.223.220","port":26100,"password":"59MdnroHjuJKJ05rGrZkbcSNcCmEopL0TV0Yk6OnPQQf","cipher":"aes-256-gcm"}
   - {"name":"cf-worker","type":"vless","server":"104.20.22.117","port":443,"uuid":"3e036e57-4d74-469a-b312-b97b59680ec3","tls":true,"network":"ws","ws-opts":{"path":"/", "headers":{"Host":"222.healer.cloud"}}}
   - {"name":"replit-vless","type":"vless","server":"vmvltrssso-nginx-pro.xuniyishifanche.repl.co","port":443,"udp":true,"uuid":"69e11b1f-e015-401e-8200-2ff23b458a4b","tls":true,"network":"ws","ws-opts":{"path":"/69e11b1f-e015-401e-8200-2ff23b458a4b-vl"}}
   - {"name":"wireguard","type":"wireguard","server":"162.159.192.218","port":8886,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:829a:e4d9:fca3:862:4b37","private-key":"SLYXlP9W2JLK4aZehWDiaH1PJKdea/qTP2sqtWxMi1Y=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["8.8.8.8","2001:4860:4860::8888"],"mtu":1420,"remote-dns-resolve":true}
@@ -38,11 +38,11 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 'aws-sg'
-      - hytron-hk-nrr
+      - hytron-hk-nnr
       - hytron-hk
-      - kurun-us-nrr
+      - kurun-us-nnr
       - akile-us
-      - akile-us-nrr
+      - akile-us-nnr
       - cf-worker
       - replit-vless
       - wireguard
@@ -53,11 +53,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 'aws-sg'
-      - hytron-hk-nrr
+      - hytron-hk-nnr
       - hytron-hk
-      - kurun-us-nrr
+      - kurun-us-nnr
       - akile-us
-      - akile-us-nrr
+      - akile-us-nnr
       - cf-worker
       - replit-vless
       - wireguard
@@ -68,11 +68,11 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 'aws-sg'
-      - hytron-hk-nrr
+      - hytron-hk-nnr
       - hytron-hk
-      - kurun-us-nrr
+      - kurun-us-nnr
       - akile-us
-      - akile-us-nrr
+      - akile-us-nnr
       - cf-worker
       - replit-vless
       - wireguard
@@ -82,11 +82,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 'aws-sg'
-      - hytron-hk-nrr
+      - hytron-hk-nnr
       - hytron-hk
-      - kurun-us-nrr
+      - kurun-us-nnr
       - akile-us
-      - akile-us-nrr
+      - akile-us-nnr
       - cf-worker
       - replit-vless
       - wireguard
@@ -96,11 +96,11 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 'aws-sg'
-      - hytron-hk-nrr
+      - hytron-hk-nnr
       - hytron-hk
-      - kurun-us-nrr
+      - kurun-us-nnr
       - akile-us
-      - akile-us-nrr
+      - akile-us-nnr
       - cf-worker
       - replit-vless
       - wireguard
@@ -110,11 +110,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 'aws-sg'
-      - hytron-hk-nrr
+      - hytron-hk-nnr
       - hytron-hk
-      - kurun-us-nrr
+      - kurun-us-nnr
       - akile-us
-      - akile-us-nrr
+      - akile-us-nnr
       - cf-worker
       - replit-vless
       - wireguard
@@ -141,11 +141,11 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 'aws-sg'
-      - hytron-hk-nrr
+      - hytron-hk-nnr
       - hytron-hk
-      - kurun-us-nrr
+      - kurun-us-nnr
       - akile-us
-      - akile-us-nrr
+      - akile-us-nnr
       - cf-worker
       - replit-vless
       - wireguard
