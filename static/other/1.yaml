@@ -28,6 +28,7 @@ proxies:
   - {"name":"kurun-us-nnr","type":"ss","server":"183.56.223.220","port":26133,"udp":true,"password":"N2Z1IZ5zgxusDXpLo0jxzaB7O0OE0Ztq6uLqMwtAP5UQ","cipher":"aes-256-gcm"}
   - {"name":"akile-us","type":"vmess","server":"111.healer.cloud","port":443,"udp":true,"cipher":"auto","uuid":"100ebb74-4bdb-4d0c-c43b-6cff75351ae8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
   - {"name":"akile-us-nnr","type":"ss","server":"183.56.223.220","port":26100,"udp":true,"password":"59MdnroHjuJKJ05rGrZkbcSNcCmEopL0TV0Yk6OnPQQf","cipher":"aes-256-gcm"}
+  - {"name":"akile-jpp","type":"vless","server":"103.232.213.161","port":443,"udp":true,"uuid":"8b031b52-3e30-42e8-b514-564e6dc79f38","tls":true,"servername":"www.microsoft.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"},"client-fingerprint":"chrome"}
   - {"name":"cf-worker","type":"vless","server":"104.20.22.117","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
   - {"name":"replit-vless","type":"vless","server":"vmvltrssso-nginx-pro.xuniyishifanche.repl.co","port":443,"udp":true,"uuid":"69e11b1f-e015-401e-8200-2ff23b458a4b","tls":true,"network":"ws","ws-opts":{"path":"/69e11b1f-e015-401e-8200-2ff23b458a4b-vl"}}
   - {"name":"wireguard","type":"wireguard","server":"162.159.192.218","port":8886,"udp":true,"ip":"172.16.0.2","ipv6":"2606:4700:110:829a:e4d9:fca3:862:4b37","private-key":"SLYXlP9W2JLK4aZehWDiaH1PJKdea/qTP2sqtWxMi1Y=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["8.8.8.8","2001:4860:4860::8888"],"mtu":1420,"remote-dns-resolve":true}
@@ -43,6 +44,7 @@ proxy-groups:
       - kurun-us-nnr
       - akile-us
       - akile-us-nnr
+      - akile-jpp
       - cf-worker
       - replit-vless
       - wireguard
@@ -58,6 +60,7 @@ proxy-groups:
       - kurun-us-nnr
       - akile-us
       - akile-us-nnr
+      - akile-jpp
       - cf-worker
       - replit-vless
       - wireguard
@@ -73,6 +76,7 @@ proxy-groups:
       - kurun-us-nnr
       - akile-us
       - akile-us-nnr
+      - akile-jpp
       - cf-worker
       - replit-vless
       - wireguard
@@ -87,6 +91,7 @@ proxy-groups:
       - kurun-us-nnr
       - akile-us
       - akile-us-nnr
+      - akile-jpp
       - cf-worker
       - replit-vless
       - wireguard
@@ -101,6 +106,7 @@ proxy-groups:
       - kurun-us-nnr
       - akile-us
       - akile-us-nnr
+      - akile-jpp
       - cf-worker
       - replit-vless
       - wireguard
@@ -115,6 +121,7 @@ proxy-groups:
       - kurun-us-nnr
       - akile-us
       - akile-us-nnr
+      - akile-jpp
       - cf-worker
       - replit-vless
       - wireguard
@@ -146,6 +153,7 @@ proxy-groups:
       - kurun-us-nnr
       - akile-us
       - akile-us-nnr
+      - akile-jpp
       - cf-worker
       - replit-vless
       - wireguard
