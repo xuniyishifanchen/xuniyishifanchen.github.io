@@ -25,10 +25,12 @@ proxies:
   - {"name":"aws-sg","type":"vless","server":"18.142.180.157","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"www.microsoft.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
   - {"name":"hytron-hk-nnr-深港","type":"ss","server":"89.185.30.156","port":10001,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-沪港","type":"ss","server":"139.226.136.165","port":25461,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
+  - {"name":"hytron-hk-nnr-广港-lepl","type":"ss","server":"120.232.235.219","port":26161,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk","type":"vless","server":"89.185.30.156","port":443,"udp":true,"uuid":"a2cf3ea0-1e0f-4e20-f996-b1355517dc18","tls":true,"servername":"www.microsoft.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"},"client-fingerprint":"chrome"}
   - {"name":"akile-us","type":"vmess","server":"111.healer.cloud","port":443,"cipher":"auto","uuid":"100ebb74-4bdb-4d0c-c43b-6cff75351ae8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
   - {"name":"akile-us-nnr-深港","type":"ss","server":"108.165.43.63","port":31440,"password":"59MdnroHjuJKJ05rGrZkbcSNcCmEopL0TV0Yk6OnPQQf","cipher":"aes-256-gcm"}
   - {"name":"akile-us-nnr-沪港","type":"ss","server":"139.226.136.165","port":25460,"password":"59MdnroHjuJKJ05rGrZkbcSNcCmEopL0TV0Yk6OnPQQf","cipher":"aes-256-gcm"}
+  - {"name":"akile-us-nnr-广港-lepl","type":"ss","server":"120.232.235.219","port":26159,"password":"59MdnroHjuJKJ05rGrZkbcSNcCmEopL0TV0Yk6OnPQQf","cipher":"aes-256-gcm"}
   - {"name":"akile-jpp","type":"vless","server":"103.232.213.161","port":443,"udp":true,"uuid":"8b031b52-3e30-42e8-b514-564e6dc79f38","tls":true,"servername":"www.microsoft.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"},"client-fingerprint":"chrome"}
   - {"name":"cf-worker","type":"vless","server":"8.222.226.46","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
   - {"name":"replit-vless","type":"vless","server":"vmvltrssso-nginx-pro.xuniyishifanche.repl.co","port":443,"uuid":"69e11b1f-e015-401e-8200-2ff23b458a4b","tls":true,"network":"ws","ws-opts":{"path":"/69e11b1f-e015-401e-8200-2ff23b458a4b-vl"}}
@@ -42,10 +44,12 @@ proxy-groups:
       - aws-sg
       - hytron-hk-nnr-深港
       - hytron-hk-nnr-沪港
+      - hytron-hk-nnr-广港-lepl 
       - hytron-hk
       - akile-us
       - akile-us-nnr-深港
       - akile-us-nnr-沪港
+      - akile-us-nnr-广港-lepl
       - akile-jpp
       - cf-worker
       - replit-vless
@@ -59,10 +63,12 @@ proxy-groups:
       - aws-sg
       - hytron-hk-nnr-深港
       - hytron-hk-nnr-沪港
+      - hytron-hk-nnr-广港-lepl 
       - hytron-hk
       - akile-us
       - akile-us-nnr-深港
       - akile-us-nnr-沪港
+      - akile-us-nnr-广港-lepl
       - akile-jpp
       - cf-worker
       - replit-vless
@@ -76,10 +82,12 @@ proxy-groups:
       - aws-sg
       - hytron-hk-nnr-深港
       - hytron-hk-nnr-沪港
+      - hytron-hk-nnr-广港-lepl
       - hytron-hk
       - akile-us
       - akile-us-nnr-深港
       - akile-us-nnr-沪港
+      - akile-us-nnr-广港-lepl
       - akile-jpp
       - cf-worker
       - replit-vless
@@ -92,10 +100,12 @@ proxy-groups:
       - aws-sg
       - hytron-hk-nnr-深港
       - hytron-hk-nnr-沪港
+      - hytron-hk-nnr-广港-lepl
       - hytron-hk
       - akile-us
       - akile-us-nnr-深港
       - akile-us-nnr-沪港
+      - akile-us-nnr-广港-lepl
       - akile-jpp
       - cf-worker
       - replit-vless
@@ -108,10 +118,12 @@ proxy-groups:
       - aws-sg
       - hytron-hk-nnr-深港
       - hytron-hk-nnr-沪港
+      - hytron-hk-nnr-广港-lepl
       - hytron-hk
       - akile-us
       - akile-us-nnr-深港
       - akile-us-nnr-沪港
+      - akile-us-nnr-广港-lepl
       - akile-jpp
       - cf-worker
       - replit-vless
@@ -124,10 +136,12 @@ proxy-groups:
       - aws-sg
       - hytron-hk-nnr-深港
       - hytron-hk-nnr-沪港
+      - hytron-hk-nnr-广港-lepl
       - hytron-hk
       - akile-us
       - akile-us-nnr-深港
       - akile-us-nnr-沪港
+      - akile-us-nnr-广港-lepl
       - akile-jpp
       - cf-worker
       - replit-vless
@@ -157,10 +171,12 @@ proxy-groups:
       - aws-sg
       - hytron-hk-nnr-深港
       - hytron-hk-nnr-沪港
+      - hytron-hk-nnr-广港-lepl
       - hytron-hk
       - akile-us
       - akile-us-nnr-深港
       - akile-us-nnr-沪港
+      - akile-us-nnr-广港-lepl
       - akile-jpp
       - cf-worker
       - replit-vless
