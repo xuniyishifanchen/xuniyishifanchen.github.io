@@ -33,6 +33,7 @@ proxies:
   - {"name":"cf-worker2","type":"vless","server":"ip.sb","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
   - {"name":"cf-worker3","type":"vless","server":"japan.com","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
   - {"name":"cf-worker4","type":"vless","server":"time.is","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
+  - {"name":"glitch-vless","type":"vless","server":"handsome-buttered-macadamia.glitch.me","port":443,"udp":true,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"handsome-buttered-macadamia.glitch.me"}},"client-fingerprint":"randomized"}
   - {"name":"replit-vless","type":"vless","server":"vmvltrssso-nginx-pro.xuniyishifanche.repl.co","port":443,"uuid":"69e11b1f-e015-401e-8200-2ff23b458a4b","tls":true,"network":"ws","ws-opts":{"path":"/69e11b1f-e015-401e-8200-2ff23b458a4b-vl"}}
   - {"name":"wireguard","type":"wireguard","server":"162.159.192.218","port":8886,"udp":true,"ip":"172.16.0.2","private-key":"SLYXlP9W2JLK4aZehWDiaH1PJKdea/qTP2sqtWxMi1Y=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["8.8.8.8","2001:4860:4860::8888"],"remote-dns-resolve":true}
 proxy-groups:
@@ -52,6 +53,7 @@ proxy-groups:
       - cf-worker2
       - cf-worker3
       - cf-worker4
+      - glitch-vless
       - replit-vless
       - wireguard
   - name: ♻️ 自动选择
@@ -71,6 +73,7 @@ proxy-groups:
       - cf-worker2
       - cf-worker3
       - cf-worker4
+      - glitch-vless
       - replit-vless
       - wireguard
   - name: 🌍 国外媒体
@@ -90,6 +93,7 @@ proxy-groups:
       - cf-worker2
       - cf-worker3
       - cf-worker4
+      - glitch-vless
       - replit-vless
       - wireguard
   - name: 📲 电报信息
@@ -108,6 +112,7 @@ proxy-groups:
       - cf-worker2
       - cf-worker3
       - cf-worker4
+      - glitch-vless
       - replit-vless
       - wireguard
   - name: Ⓜ️ 微软服务
@@ -126,6 +131,7 @@ proxy-groups:
       - cf-worker2
       - cf-worker3
       - cf-worker4
+      - glitch-vless
       - replit-vless
       - wireguard
   - name: 🍎 苹果服务
@@ -144,6 +150,7 @@ proxy-groups:
       - cf-worker2
       - cf-worker3
       - cf-worker4
+      - glitch-vless
       - replit-vless
       - wireguard
   - name: 🎯 全球直连
@@ -179,6 +186,7 @@ proxy-groups:
       - cf-worker2
       - cf-worker3
       - cf-worker4
+      - glitch-vless
       - replit-vless
       - wireguard
 
