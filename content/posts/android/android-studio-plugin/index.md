@@ -41,3 +41,5 @@ categories: ["android"]
 
 ## 10. [ADB idea](https://plugins.jetbrains.com/plugin/7380-adb-idea)
 >adb 命令插件
+
+## 11. [jetpack compose 快捷键](https://plugins.jetbrains.com/plugin/18323-compose-helper)
