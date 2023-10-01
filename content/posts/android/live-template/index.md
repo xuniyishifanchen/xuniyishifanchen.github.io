@@ -74,3 +74,14 @@ androidx.compose.material.IconButton(
     )
 }
 ```
+
+## 8 `mod` (applicable in Kotlin except Comment)
+```kotlin
+modfier = androidx.compose.ui.Modifier.$PARAM$
+```
+Make the PARAM complete().
+```kotlin
+EDIT VARIABLES -> Expression complete()
+```
+
+
