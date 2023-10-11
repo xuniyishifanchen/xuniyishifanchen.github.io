@@ -22,7 +22,7 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"aws-sg","type":"vless","server":"54.179.31.50","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
+  - {"name":"aws-sg","type":"vless","server":"13.213.6.2","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
   - {"name":"hytron-hk-nnr-安港","type":"ss","server":"111.38.37.15","port":29392,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-安港2","type":"ss","server":"58.242.130.102","port":29392,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-广港","type":"ss","server":"183.233.187.244","port":29392,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
