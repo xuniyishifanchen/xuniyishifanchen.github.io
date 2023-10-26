@@ -26,4 +26,4 @@ categories:
 ## 4. 书籍
 1. Jetpack Compose 从入门到实践
 
-## 5.[Top 20 compose mistakes](/pdf/top-20-compose-mistakes.pdf)
+## 5.[Top 20 compose mistakes](/pdf/top-20-compose-mistakes.pdf )
