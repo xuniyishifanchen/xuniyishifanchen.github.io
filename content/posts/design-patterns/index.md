@@ -13,6 +13,7 @@ categories: ["设计模式"]
 ---
 ## 学习网站
 1. https://refactoring.guru/design-patterns
+2. https://bright-boy.gitee.io/technical-notes/#/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index
 
 ## 教学视频
 1. https://www.bilibili.com/video/BV1af4y1y7sS/?spm_id_from=333.788
@@ -21,6 +22,7 @@ categories: ["设计模式"]
 ## 书籍
 1. [大话设计模式](/pdf/大话设计模式.pdf)
 2. [设计模式之禅](/pdf/设计模式之禅-第2版.pdf)
+3. [黑马程序员-设计模式](/pdf/黑马程序员-设计模式.pdf)
 
 ## 创建型模式
 ### 1.单例模式(Singleton)
