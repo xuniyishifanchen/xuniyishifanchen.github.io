@@ -24,16 +24,17 @@ dns:
 proxies:
   - {"name":"aws-sg","type":"vless","server":"3.0.98.210","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
   - {"name":"akile-jpp","type":"vless","server":"38.207.130.91","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
+  - {"name":"akile-jpp-hy2","type":"hysteria2","server":"111.healer.cloud","port":443,"password":"healer"}
   - {"name":"hytron-hk-nnr-安港","type":"ss","server":"111.38.37.15","port":29392,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-安港2","type":"ss","server":"58.242.130.170","port":29392,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-广港","type":"ss","server":"183.233.187.244","port":29392,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-广港-lepl","type":"ss","server":"183.240.117.12","port":26161,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-广港-lepl2","type":"ss","server":"183.240.232.214","port":27883,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk","type":"vless","server":"89.185.30.156","port":443,"udp":true,"uuid":"a2cf3ea0-1e0f-4e20-f996-b1355517dc18","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"},"client-fingerprint":"chrome"}
-  - {"name":"cf-worker1","type":"vless","server":"x.adorabletoad.tk","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
-  - {"name":"cf-worker2","type":"vless","server":"opop.200307.xyz","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
+  - {"name":"cf-worker1","type":"vless","server":"333.666999.world","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
+  - {"name":"cf-worker2","type":"vless","server":"yx.cloudflarest.link","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
   - {"name":"cf-worker3","type":"vless","server":"jp01.nttkk.com","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
-  - {"name":"cf-worker4","type":"vless","server":"cdn.chigua.tk","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
+  - {"name":"cf-worker4","type":"vless","server":"1443.cf.bestl.de","port":443,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
   - {"name":"glitch-vless","type":"vless","server":"handsome-buttered-macadamia.glitch.me","port":443,"udp":true,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"handsome-buttered-macadamia.glitch.me"}},"client-fingerprint":"randomized"}
   - {"name":"replit-vless","type":"vless","server":"vmvltrssso-nginx-pro.xuniyishifanche.repl.co","port":443,"uuid":"69e11b1f-e015-401e-8200-2ff23b458a4b","tls":true,"network":"ws","ws-opts":{"path":"/69e11b1f-e015-401e-8200-2ff23b458a4b-vl"}}
   - {"name":"wireguard","type":"wireguard","server":"162.159.192.218","port":8886,"udp":true,"ip":"172.16.0.2","private-key":"SLYXlP9W2JLK4aZehWDiaH1PJKdea/qTP2sqtWxMi1Y=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["8.8.8.8","2001:4860:4860::8888"],"remote-dns-resolve":true}
@@ -44,6 +45,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - aws-sg
+      - akile-jpp-hy2
       - akile-jpp
       - hytron-hk-nnr-安港
       - hytron-hk-nnr-安港2
@@ -66,6 +68,7 @@ proxy-groups:
     proxies:
       - aws-sg
       - akile-jpp
+      - akile-jpp-hy2
       - hytron-hk-nnr-安港
       - hytron-hk-nnr-安港2
       - hytron-hk-nnr-广港 
@@ -87,6 +90,7 @@ proxy-groups:
       - 🎯 全球直连
       - aws-sg
       - akile-jpp
+      - akile-jpp-hy2
       - hytron-hk-nnr-安港
       - hytron-hk-nnr-安港2
       - hytron-hk-nnr-广港
@@ -107,6 +111,7 @@ proxy-groups:
       - 🎯 全球直连
       - aws-sg
       - akile-jpp
+      - akile-jpp-hy2
       - hytron-hk-nnr-安港
       - hytron-hk-nnr-安港2
       - hytron-hk-nnr-广港
@@ -127,6 +132,7 @@ proxy-groups:
       - 🚀 节点选择
       - aws-sg
       - akile-jpp
+      - akile-jpp-hy2
       - hytron-hk-nnr-安港
       - hytron-hk-nnr-安港2
       - hytron-hk-nnr-广港 
@@ -147,6 +153,7 @@ proxy-groups:
       - 🎯 全球直连
       - aws-sg
       - akile-jpp
+      - akile-jpp-hy2
       - hytron-hk-nnr-安港
       - hytron-hk-nnr-安港2
       - hytron-hk-nnr-广港 
@@ -184,6 +191,7 @@ proxy-groups:
       - ♻️ 自动选择
       - aws-sg
       - akile-jpp
+      - akile-jpp-hy2
       - hytron-hk-nnr-安港
       - hytron-hk-nnr-安港2
       - hytron-hk-nnr-广港 
