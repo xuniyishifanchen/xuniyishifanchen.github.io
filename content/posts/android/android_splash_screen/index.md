@@ -16,3 +16,6 @@ categories: ["android"]
 ## [Animated splash desgin website](https://shapeshifter.design/)
 
 {{< youtube Oy0oXwv3kSc >}}
+
+## The Philipp's Video
+{{< youtube eFZmMSm1G1c >}}
