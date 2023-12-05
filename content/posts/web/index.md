@@ -27,3 +27,10 @@ categories: ["tips"]
 11. Android库制做网站：<https://jitpack.io>
 12. 免费域名注册网站：<https://www.freenom.com/en/index.html?lang=en>
 13. http 请求网站：<https://hoppscotch.io/>
+14. 后端数据模拟生成网站：<https://mockaroo.com/>
+15. shell 命令解释网站：<https://explainshell.com/>
+16. plantuml 生成流程图网站: <https://plantuml.com/zh/>
+17. android 交流平台：<https://dev.to/t/android>
+
+
+
