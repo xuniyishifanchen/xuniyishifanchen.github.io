@@ -23,14 +23,16 @@ categories: ["tips"]
 7. 代码查询网站: <https://sourcegraph.com/search?>
 8. Uml 图设计网站：<https://app.diagrams.net>
 9. 魔戒VPN：<https://www.mojie.cyou>
-10. pdf 下载网站：<https://zh.z-lib.org>
+10. pdf 书下载网站：<https://zh.z-lib.org>
 11. Android库制做网站：<https://jitpack.io>
 12. 免费域名注册网站：<https://www.freenom.com/en/index.html?lang=en>
-13. http 请求网站：<https://hoppscotch.io/>
-14. 后端数据模拟生成网站：<https://mockaroo.com/>
-15. shell 命令解释网站：<https://explainshell.com/>
-16. plantuml 生成流程图网站: <https://plantuml.com/zh/>
-17. android 交流平台：<https://dev.to/t/android>
+13. eu.org 免费域名注册网站：<https://nic.eu.org/>
+14. http 请求网站：<https://hoppscotch.io/>
+15. 后端数据模拟生成网站：<https://mockaroo.com/>
+16. shell 命令解释网站：<https://explainshell.com/>
+17. plantuml 生成流程图网站: <https://plantuml.com/zh/>
+18. android 交流平台：<https://dev.to/t/android>
+19. sing-box 订阅转换： <https://sing-box-subscribe-six-tau-xuniyishifanchen.vercel.app/>
 
 
 
