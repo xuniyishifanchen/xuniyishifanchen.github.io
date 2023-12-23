@@ -1,0 +1,628 @@
+{
+  "log": {
+    "level": "debug",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "proxyDns",
+        "address": "8.8.8.8",
+        "detour": "proxy"
+      },
+      {
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ghproxy.com",
+          "cdn.jsdelivr.net",
+          "testingcf.jsdelivr.net"
+        ],
+        "server": "localDns"
+      },
+      {
+        "geosite": "category-ads-all",
+        "server": "block"
+      },
+      {
+        "outbound": "any",
+        "server": "localDns",
+        "disable_cache": true
+      },
+      {
+        "geosite": "cn",
+        "server": "localDns"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "localDns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "proxyDns"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "server": "proxyDns"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "endpoint_independent_nat": false,
+      "stack": "system",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 2080
+        }
+      }
+    },
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 2080,
+      "sniff": true,
+      "users": []
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "direct",
+        "aws-jp",
+        "aws-jp-hy2",
+        "akile-jpp",
+        "akile-jpp-hy2",
+        "ak-jp-zf-江日",
+        "🇯🇵 ak-jp-zf-广日",
+        "🇭🇰 hytron-hk-zf-广港",
+        "ak-jp-nnr-安日",
+        "🇯🇵 ak-jp-nnr-上日",
+        "hytron-hk-nnr-安港",
+        "hytron-hk-nnr-安港2",
+        "hytron-hk-nnr-上港",
+        "🇭🇰 hytron-hk-nnr-广港",
+        "🇭🇰 hytron-hk-nnr-广港-lepl",
+        "🇭🇰 hytron-hk-nnr-广港-lepl2",
+        "hytron-hk-nnr-深港-lepl",
+        "hytron-hk",
+        "cf-worker1",
+        "cf-worker2",
+        "cf-worker3",
+        "cf-worker4",
+        "glitch-vless",
+        "replit-vless",
+        "wireguard"
+      ]
+    },
+    {
+      "tag": "🌏 !cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "aws-jp",
+        "aws-jp-hy2",
+        "akile-jpp",
+        "akile-jpp-hy2",
+        "ak-jp-zf-江日",
+        "🇯🇵 ak-jp-zf-广日",
+        "🇭🇰 hytron-hk-zf-广港",
+        "ak-jp-nnr-安日",
+        "🇯🇵 ak-jp-nnr-上日",
+        "hytron-hk-nnr-安港",
+        "hytron-hk-nnr-安港2",
+        "hytron-hk-nnr-上港",
+        "🇭🇰 hytron-hk-nnr-广港",
+        "🇭🇰 hytron-hk-nnr-广港-lepl",
+        "🇭🇰 hytron-hk-nnr-广港-lepl2",
+        "hytron-hk-nnr-深港-lepl",
+        "hytron-hk",
+        "cf-worker1",
+        "cf-worker2",
+        "cf-worker3",
+        "cf-worker4",
+        "glitch-vless",
+        "replit-vless",
+        "wireguard"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "aws-jp",
+        "aws-jp-hy2",
+        "akile-jpp",
+        "akile-jpp-hy2",
+        "ak-jp-zf-江日",
+        "🇯🇵 ak-jp-zf-广日",
+        "🇭🇰 hytron-hk-zf-广港",
+        "ak-jp-nnr-安日",
+        "🇯🇵 ak-jp-nnr-上日",
+        "hytron-hk-nnr-安港",
+        "hytron-hk-nnr-安港2",
+        "hytron-hk-nnr-上港",
+        "🇭🇰 hytron-hk-nnr-广港",
+        "🇭🇰 hytron-hk-nnr-广港-lepl",
+        "🇭🇰 hytron-hk-nnr-广港-lepl2",
+        "hytron-hk-nnr-深港-lepl",
+        "hytron-hk",
+        "cf-worker1",
+        "cf-worker2",
+        "cf-worker3",
+        "cf-worker4",
+        "glitch-vless",
+        "replit-vless",
+        "wireguard"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "tag": "aws-jp",
+      "type": "vless",
+      "server": "52.195.223.17",
+      "server_port": 13495,
+      "uuid": "60caa8e5-793d-41aa-97a0-37dab7db9d1e",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "NOJb0rRvT_pnCiJcs0OV0GQ9TtANVzxpGdKbyzaZhiI"
+        }
+      }
+    },
+    {
+      "tag": "aws-jp-hy2",
+      "type": "hysteria2",
+      "server": "52.195.223.17",
+      "server_port": 10000,
+      "password": "b2cc84c0",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "akile-jpp",
+      "type": "vless",
+      "server": "38.207.130.91",
+      "server_port": 443,
+      "uuid": "a195a6f5-dd87-4ba9-ad07-0db8258d0b96",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"
+        }
+      }
+    },
+    {
+      "tag": "akile-jpp-hy2",
+      "type": "hysteria2",
+      "server": "111.healer.cloud",
+      "server_port": 443,
+      "password": "healer",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "ak-jp-zf-江日",
+      "type": "shadowsocks",
+      "server": "cm-02.zhuanfa.link",
+      "server_port": 19922,
+      "method": "aes-256-gcm",
+      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE"
+    },
+    {
+      "tag": "🇯🇵 ak-jp-zf-广日",
+      "type": "shadowsocks",
+      "server": "cm-03.zhuanfa.link",
+      "server_port": 19922,
+      "method": "aes-256-gcm",
+      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE"
+    },
+    {
+      "tag": "🇭🇰 hytron-hk-zf-广港",
+      "type": "shadowsocks",
+      "server": "cm-03.zhuanfa.link",
+      "server_port": 40293,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "ak-jp-nnr-安日",
+      "type": "shadowsocks",
+      "server": "2fd3ffd3-1bdb-424c-a9d8-487236698c29.xuniyishifanchen.link",
+      "server_port": 35208,
+      "method": "aes-256-gcm",
+      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE",
+      "udp_over_tcp": {
+        "enabled": true
+      }
+    },
+    {
+      "tag": "🇯🇵 ak-jp-nnr-上日",
+      "type": "shadowsocks",
+      "server": "0428c217-b76f-40f0-b9df-b5fef7be0a34.xuniyishifanchen.link",
+      "server_port": 45154,
+      "method": "aes-256-gcm",
+      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE",
+      "udp_over_tcp": {
+        "enabled": true
+      }
+    },
+    {
+      "tag": "hytron-hk-nnr-安港",
+      "type": "shadowsocks",
+      "server": "3f6c3f59-67e5-48fb-9e61-e34e1db95227.xuniyishifanchen.link",
+      "server_port": 29392,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "hytron-hk-nnr-安港2",
+      "type": "shadowsocks",
+      "server": "f339f3e7-5520-4268-8ca7-b0dcde7a402d.xuniyishifanchen.link",
+      "server_port": 29392,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "hytron-hk-nnr-上港",
+      "type": "shadowsocks",
+      "server": "049d691a-c65c-4e86-a79b-e32509851add.xuniyishifanchen.link",
+      "server_port": 29392,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "🇭🇰 hytron-hk-nnr-广港",
+      "type": "shadowsocks",
+      "server": "82ebf39a-b624-463d-a4da-3d644a4749a9.xuniyishifanchen.link",
+      "server_port": 29392,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "🇭🇰 hytron-hk-nnr-广港-lepl",
+      "type": "shadowsocks",
+      "server": "50045ba2-29c9-408c-86b5-976042645f52.xuniyishifanchen.link",
+      "server_port": 26161,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "🇭🇰 hytron-hk-nnr-广港-lepl2",
+      "type": "shadowsocks",
+      "server": "6cf4a639-f0dd-42d3-81d7-f47e426264f6.xuniyishifanchen.link",
+      "server_port": 27883,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "hytron-hk-nnr-深港-lepl",
+      "type": "shadowsocks",
+      "server": "7fc17ab8-cf06-4a5e-8e9b-4bb4a1f91ded.xuniyishifanchen.link",
+      "server_port": 25428,
+      "method": "aes-256-gcm",
+      "password": "YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc"
+    },
+    {
+      "tag": "hytron-hk",
+      "type": "vless",
+      "server": "89.185.30.156",
+      "server_port": 443,
+      "uuid": "a2cf3ea0-1e0f-4e20-f996-b1355517dc18",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "itunes.apple.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"
+        }
+      }
+    },
+    {
+      "tag": "cf-worker1",
+      "type": "vless",
+      "server": "cf.flyff.eu.org",
+      "server_port": 2053,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "worker.healer.cloud",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "worker.healer.cloud"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2048
+      }
+    },
+    {
+      "tag": "cf-worker2",
+      "type": "vless",
+      "server": "43.134.166.213",
+      "server_port": 10444,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "worker.healer.cloud",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "worker.healer.cloud"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2048
+      }
+    },
+    {
+      "tag": "cf-worker3",
+      "type": "vless",
+      "server": "kj.wuchangk.one",
+      "server_port": 2053,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "worker.healer.cloud",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "worker.healer.cloud"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2048
+      }
+    },
+    {
+      "tag": "cf-worker4",
+      "type": "vless",
+      "server": "time.is",
+      "server_port": 2053,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "worker.healer.cloud",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "worker.healer.cloud"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol",
+        "max_early_data": 2048
+      }
+    },
+    {
+      "tag": "glitch-vless",
+      "type": "vless",
+      "server": "handsome-buttered-macadamia.glitch.me",
+      "server_port": 443,
+      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "None",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": ""
+        }
+      }
+    },
+    {
+      "tag": "replit-vless",
+      "type": "vless",
+      "server": "vmvltrssso-nginx-pro.xuniyishifanche.repl.co",
+      "server_port": 443,
+      "uuid": "69e11b1f-e015-401e-8200-2ff23b458a4b",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "None"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/69e11b1f-e015-401e-8200-2ff23b458a4b-vl",
+        "headers": {
+          "Host": ""
+        }
+      }
+    },
+    {
+      "tag": "wireguard",
+      "type": "wireguard",
+      "server": "162.159.192.218",
+      "server_port": 8886,
+      "private_key": "SLYXlP9W2JLK4aZehWDiaH1PJKdea/qTP2sqtWxMi1Y=",
+      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "local_address": [
+        "172.16.0.2/32"
+      ]
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "proxy",
+    "geoip": {
+      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.db",
+      "download_detour": "direct"
+    },
+    "geosite": {
+      "download_url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.db",
+      "download_detour": "direct"
+    },
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "geosite": "category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "proxy"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "outbound": "🌏 !cn"
+      },
+      {
+        "geoip": [
+          "private",
+          "cn"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": "cn",
+        "outbound": "direct"
+      }
+    ]
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui_download_url": "",
+      "external_ui_download_detour": "",
+      "external_ui": "ui",
+      "secret": "",
+      "default_mode": "rule",
+      "store_selected": true,
+      "cache_file": "",
+      "cache_id": ""
+    }
+  }
+}
