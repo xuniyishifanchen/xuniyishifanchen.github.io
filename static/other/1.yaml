@@ -24,7 +24,7 @@ dns:
     fallback: [119.29.29.29, 114.114.115.115, 'https://dns.rubyfish.cn/dns-query', 'tls://8.8.4.4', 'tls://1.0.0.1:853', 'https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
-  - {"name":"aws-jp","type":"vless","server":"52.195.223.17","port":13495,"udp":true,"uuid":"60caa8e5-793d-41aa-97a0-37dab7db9d1e","tls":true}
+  - {name: "aws-jp", type: vless, server: 52.195.223.17, port: 13495, uuid: 60caa8e5-793d-41aa-97a0-37dab7db9d1e, network: tcp, udp: true, tls: true, servername: addons.mozilla.org, flow: xtls-rprx-vision, client-fingerprint: chrome, reality-opts: {public-key: NOJb0rRvT_pnCiJcs0OV0GQ9TtANVzxpGdKbyzaZhiI, short-id: ""} }
   - {"name":"aws-jp-hy2","type":"hysteria2","server":"52.195.223.17","port":10000,"password":"b2cc84c0","sni":"www.bing.com","skip-cert-verify":true}
   - {"name":"akile-jpp","type":"vless","server":"38.207.130.91","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
   - {"name":"akile-jpp-hy2","type":"hysteria2","server":"111.healer.cloud","port":443,"password":"healer"}
