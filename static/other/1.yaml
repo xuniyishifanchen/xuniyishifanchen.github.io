@@ -26,9 +26,9 @@ dns:
 
 proxies:
   - {name: "aws-jp", type: vless, server: 52.195.223.17, port: 13495, uuid: 60caa8e5-793d-41aa-97a0-37dab7db9d1e, network: tcp, udp: true, tls: true, servername: addons.mozilla.org, flow: xtls-rprx-vision, client-fingerprint: chrome, reality-opts: {public-key: NOJb0rRvT_pnCiJcs0OV0GQ9TtANVzxpGdKbyzaZhiI, short-id: ""} }
-  - {"name":"aws-jp-hy2","type":"hysteria2","server":"52.195.223.17","port":10000,"password":"b2cc84c0","sni":"www.bing.com"}
+  - {"name":"aws-jp-hy2","type":"hysteria2","server":"52.195.223.17","port":10000,"password":"b2cc84c0","sni":"www.bing.com","skip-cert-verify":true}
   - {"name":"akile-jpp","type":"vless","server":"38.207.130.91","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
-  - {"name":"akile-jpp-hy2","type":"hysteria2","server":"111.healer.cloud","port":443,"password":"healer"}
+  - {"name":"akile-jpp-hy2","type":"hysteria2","server":"111.healer.cloud","port":443,"password":"healer","skip-cert-verify":true}
   - {"name":"ak-jp-zf-江日","type":"ss","server":"cm-02.zhuanfa.link","port":19922,"password":"1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE","cipher":"aes-256-gcm", "udp": true}
   - {"name":"ak-jp-zf-广日","type":"ss","server":"cm-03.zhuanfa.link","port":19922,"password":"1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE","cipher":"aes-256-gcm", "udp": true}
   - {"name":"hytron-hk-zf-广港","type":"ss","server":"cm-03.zhuanfa.link","port":40293,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm", "udp": true}
