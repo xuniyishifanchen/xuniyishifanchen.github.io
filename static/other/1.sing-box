@@ -107,6 +107,9 @@
         "🇭🇰 hytron-hk-nnr-广港-lepl2",
         "hytron-hk-nnr-深港-lepl",
         "hytron-hk",
+        "ak-hk-hy2",
+        "🇭🇰 ak-hk-zf-广港",
+        "🇭🇰 ak-hk-nnr-广港-lepl2",
         "cf-worker1",
         "cf-worker2",
         "cf-worker3",
@@ -138,6 +141,9 @@
         "🇭🇰 hytron-hk-nnr-广港-lepl2",
         "hytron-hk-nnr-深港-lepl",
         "hytron-hk",
+        "ak-hk-hy2",
+        "🇭🇰 ak-hk-zf-广港",
+        "🇭🇰 ak-hk-nnr-广港-lepl2",
         "cf-worker1",
         "cf-worker2",
         "cf-worker3",
@@ -168,6 +174,9 @@
         "🇭🇰 hytron-hk-nnr-广港-lepl2",
         "hytron-hk-nnr-深港-lepl",
         "hytron-hk",
+        "ak-hk-hy2",
+        "🇭🇰 ak-hk-zf-广港",
+        "🇭🇰 ak-hk-nnr-广港-lepl2",
         "cf-worker1",
         "cf-worker2",
         "cf-worker3",
@@ -299,10 +308,7 @@
       "server": "2fd3ffd3-1bdb-424c-a9d8-487236698c29.xuniyishifanchen.link",
       "server_port": 35208,
       "method": "aes-256-gcm",
-      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE",
-      "udp_over_tcp": {
-        "enabled": true
-      }
+      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE"
     },
     {
       "tag": "🇯🇵 ak-jp-nnr-上日",
@@ -310,10 +316,7 @@
       "server": "0428c217-b76f-40f0-b9df-b5fef7be0a34.xuniyishifanchen.link",
       "server_port": 45154,
       "method": "aes-256-gcm",
-      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE",
-      "udp_over_tcp": {
-        "enabled": true
-      }
+      "password": "1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE"
     },
     {
       "tag": "hytron-hk-nnr-安港",
@@ -392,6 +395,39 @@
           "public_key": "4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"
         }
       }
+    },
+    {
+      "tag": "ak-hk-hy2",
+      "type": "hysteria2",
+      "server": "203.147.228.144",
+      "server_port": 61621,
+      "password": "a39375f1",
+      "up_mbps": 10,
+      "down_mbps": 100,
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "tag": "🇭🇰 ak-hk-zf-广港",
+      "type": "shadowsocks",
+      "server": "cm-03.zhuanfa.link",
+      "server_port": 28841,
+      "method": "aes-256-gcm",
+      "password": "9w4HPLDVwUucYSHIYVFq5qWMwGlpamZpj355Ctq35TUE"
+    },
+    {
+      "tag": "🇭🇰 ak-hk-nnr-广港-lepl2",
+      "type": "shadowsocks",
+      "server": "6cf4a639-f0dd-42d3-81d7-f47e426264f6.xuniyishifanchen.link",
+      "server_port": 25880,
+      "method": "aes-256-gcm",
+      "password": "9w4HPLDVwUucYSHIYVFq5qWMwGlpamZpj355Ctq35TUE"
     },
     {
       "tag": "cf-worker1",
