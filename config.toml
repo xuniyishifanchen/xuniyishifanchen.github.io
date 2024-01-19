@@ -52,6 +52,16 @@ theme = "FixIt"
     weight = 3
     [menu.main.params]
       icon = "fa-solid fa-tags faa-horizontal faa-slow animated-hover"
+ [[menu.main]]
+    identifier = "导航"
+    pre = ""
+    post = ""
+    name = "导航"
+    url = "/sitenav/"
+    title = ""
+    weight = 4
+    [menu.main.params]
+      icon = "fa-solid fa-table-columns faa-horizontal faa-slow animated-hover"
   [[menu.main]]
     identifier = "about"
     pre = ""
@@ -59,13 +69,13 @@ theme = "FixIt"
     name = "关于"
     url = "/about/"
     title = ""
-    weight = 4
+    weight = 5
     [menu.main.params]
       icon = "fa-solid fa-info-circle faa-horizontal faa-slow animated-hover"
 
 [params]
   #  FixIt 主题版本
-  version = "0.2.x" # 例如："0.2.X", "0.2.15", "v0.2.15" 等
+  version = "0.3.1" # 例如："0.2.X", "0.2.15", "v0.2.15" 等
   # 网站描述
   description = "许你一世凡尘的Blog"
   # 网站关键词
