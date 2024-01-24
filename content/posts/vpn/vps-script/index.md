@@ -79,3 +79,18 @@ bash <(curl -sSL "https://git.io/JswGm")
 ```
 bash <(wget -qO- bash.spiritlhl.net/ecs)
 ```
+
+## 更新环境
+```
+apt update -y  && apt upgrade -y && apt install -y curl wget sudo socat
+```
+
+## 当前主机ip
+```
+curl ifconfig.me/all
+```
+
+## Dokcer安装
+```
+curl ifconfig.me/all
+```
