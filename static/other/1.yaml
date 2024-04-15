@@ -24,8 +24,6 @@ dns:
     fallback: [119.29.29.29, 114.114.115.115, 'https://dns.rubyfish.cn/dns-query', 'tls://8.8.4.4', 'tls://1.0.0.1:853', 'https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
-  - {name: "aws-jp", type: vless, server: 52.195.223.17, port: 13495, uuid: 60caa8e5-793d-41aa-97a0-37dab7db9d1e, network: tcp, udp: true, tls: true, servername: addons.mozilla.org, flow: xtls-rprx-vision, client-fingerprint: chrome, reality-opts: {public-key: NOJb0rRvT_pnCiJcs0OV0GQ9TtANVzxpGdKbyzaZhiI, short-id: ""} }
-  - {"name":"aws-jp-hy2","type":"hysteria2","server":"52.195.223.17","port":10000,"password":"b2cc84c0","sni":"www.bing.com","skip-cert-verify":true}
   - {"name":"akile-jpp","type":"vless","server":"38.207.130.91","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
   - {"name":"akile-jpp-hy2","type":"hysteria2","server":"111.healer.cloud","port":443,"password":"healer"}
   - {"name":"ak-jp-nnr-安日","type":"ss","server":"2fd3ffd3-1bdb-424c-a9d8-487236698c29.xuniyishifanchen.link","port":35318,"udp":true,"password":"1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE","cipher":"aes-256-gcm"}
@@ -34,8 +32,8 @@ proxies:
   - {"name":"hytron-hk-nnr-广港-lepl2","type":"ss","server":"6cf4a639-f0dd-42d3-81d7-f47e426264f6.xuniyishifanchen.link","port":29392,"udp":true,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-深港-lepl","type":"ss","server":"7fc17ab8-cf06-4a5e-8e9b-4bb4a1f91ded.xuniyishifanchen.link","port":29392,"udp":true,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk","type":"vless","server":"89.185.30.156","port":443,"udp":true,"uuid":"a2cf3ea0-1e0f-4e20-f996-b1355517dc18","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"4comh-7Jm_wZXJQ5QiLSCbVGQIbMUzHUIBdb0aFtLzM"},"client-fingerprint":"chrome"}
-  - {"name":"cf-worker1","type":"vless","server":"cf.flyff.eu.org","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
-  - {"name":"cf-worker2","type":"vless","server":"43.134.166.213","port":10444,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.healer.cloud","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.healer.cloud"}},"client-fingerprint":"randomized"}
+  - {"name":"cf-worker1","type":"vless","server":"cf.flyff.eu.org","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.xuniyishifanchen.link","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.xuniyishifanchen.link"}},"client-fingerprint":"randomized"}
+  - {"name":"cf-worker2","type":"vless","server":"43.134.166.213","port":10444,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.xuniyishifanchen.link","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.xuniyishifanchen.link"}},"client-fingerprint":"randomized"}
   - {"name":"wireguard","type":"wireguard","server":"162.159.192.218","port":8886,"udp":true,"ip":"172.16.0.2","private-key":"SLYXlP9W2JLK4aZehWDiaH1PJKdea/qTP2sqtWxMi1Y=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["8.8.8.8","2001:4860:4860::8888"],"remote-dns-resolve":true}
 proxy-groups:
   - name: 🚀 节点选择
@@ -43,8 +41,6 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - aws-jp
-      - aws-jp-hy2
       - akile-jpp-hy2
       - akile-jpp
       - ak-jp-nnr-安日
@@ -62,8 +58,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - aws-jp
-      - aws-jp-hy2
       - akile-jpp-hy2
       - akile-jpp
       - ak-jp-nnr-安日
@@ -81,8 +75,6 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - aws-jp
-      - aws-jp-hy2
       - akile-jpp-hy2
       - akile-jpp
       - ak-jp-nnr-安日
@@ -99,8 +91,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - aws-jp
-      - aws-jp-hy2
       - akile-jpp-hy2
       - akile-jpp
       - ak-jp-nnr-安日
@@ -117,8 +107,6 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - aws-jp
-      - aws-jp-hy2
       - akile-jpp-hy2
       - akile-jpp
       - ak-jp-nnr-安日
@@ -135,8 +123,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - aws-jp
-      - aws-jp-hy2
       - akile-jpp-hy2
       - akile-jpp
       - ak-jp-nnr-安日
@@ -170,8 +156,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - aws-jp
-      - aws-jp-hy2
       - akile-jpp-hy2
       - akile-jpp
       - ak-jp-nnr-安日
