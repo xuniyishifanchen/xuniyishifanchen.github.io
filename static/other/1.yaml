@@ -25,7 +25,7 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32, 127.0.0.1/32], domain: [+.google.com, +.facebook.com, +.twitter.com, +.youtube.com, +.xn--ngstr-lra8j.com, +.google.cn, +.googleapis.cn, +.googleapis.com, +.gvt1.com] }
 proxies:
   - {"name":"akile-jpp","type":"vless","server":"38.207.130.91","port":443,"udp":true,"uuid":"a195a6f5-dd87-4ba9-ad07-0db8258d0b96","tls":true,"servername":"itunes.apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"rYH4wPTVzSwtpXgI3U7YxppIP6oudD-425vT7pyhj1w"},"client-fingerprint":"chrome"}
-  - {"name":"akile-jpp-hy2","type":"hysteria2","server":"111.healer.cloud","port":443,"password":"healer"}
+  - {"name":"akile-jpp-hy2","type":"hysteria2","server":"38.207.130.91","port":2308,"password":"50a88b3f","sni":"www.bing.com","skip-cert-verify":true}
   - {"name":"ak-jp-nnr-安日","type":"ss","server":"2fd3ffd3-1bdb-424c-a9d8-487236698c29.xuniyishifanchen.link","port":35318,"udp":true,"password":"1oD4AUmbES92n1ED5TASyh5JFsAwCKRARtMFnsp3fDNE","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-安港2","type":"ss","server":"f339f3e7-5520-4268-8ca7-b0dcde7a402d.xuniyishifanchen.link","port":29392,"udp":true,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
   - {"name":"hytron-hk-nnr-广港-lepl","type":"ss","server":"50045ba2-29c9-408c-86b5-976042645f52.xuniyishifanchen.link","port":29392,"udp":true,"password":"YGlH6EATas4wkEfBM6a34PagPU0UT8eudASsPS2tPkJc","cipher":"aes-256-gcm"}
