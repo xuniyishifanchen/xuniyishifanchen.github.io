@@ -130,6 +130,13 @@ htpasswd -m ~/gerrit_site/etc/passwords person1
 ### 11 访问服务ip：8090
 
 
+### 12 删除创建好的工程
+```
+ssh -p 29418 gerrit.example.com delete-project delete --yes-really-delete my-project
+```
+
+### 13 隐藏工程
+将继承自All-Project的"refs/heads/*"的Anonymous Users的READ 属性设置成Deny.
 遇到的问题：
 ```
 1. passwords 文件apache2 无法访问，需要给目录和文件都加权限。
