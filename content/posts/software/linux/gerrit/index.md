@@ -40,7 +40,7 @@ java -jar gerrit-3.10.1.war init --batch -d .
 ### 5 配置插件
 ```
 unzip -oq gerrit-3.10.1.war -d gerrit-3.10.1
-cp -r gerrit-3.10.1/WEB-INF/plugins/ plugins/
+cp -r gerrit-3.10.1/WEB-INF/plugins/* plugins/
 ```
 ### 6 配置gerrit
 将Auth方式从OPENID改成HTTP
