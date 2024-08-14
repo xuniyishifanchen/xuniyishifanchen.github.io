@@ -99,7 +99,7 @@ Listen 8090
         AuthType Basic
         AuthName "Gerrit Code Review"
         AuthBasicProvider file
-        AuthUserFile "~/gerrit/etc/passwords"
+        AuthUserFile "/home/username/gerrit_site/etc/passwords" // 修改username为自己用户名
         Require valid-user
     </Location>
     AllowEncodedSlashes On
@@ -115,12 +115,12 @@ sudo systemctl status apache2.service
 
 ### 8 创建用户
 ```
-htpasswd -c ~/gerrit/etc/passwords admin
+htpasswd -c ~/gerrit_site/etc/passwords admin
 ```
 
 ### 9 添加用户
 ```
-htpasswd -m ~/gerrit/etc/passwords person1
+htpasswd -m ~/gerrit_site/etc/passwords person1
 ```
 ### 10 启动gerrit 服务
 ```
