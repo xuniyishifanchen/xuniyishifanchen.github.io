@@ -56,3 +56,41 @@ categories: ["language"]
 2. `ATOMIC`: 协程创建后，立即开始调度，协程执行到第一个挂起点之前协程不能被取消。
 3. `LAZY`: 只有协程被需要时，包括主协程调用协程的start, join或者await等函数时才会开始调度，如果调度前就被取消，那么协程将直接进入异常结束状态。
 4. `UNDISPATCHED`: 协程创建后立即在当前函数调用栈中执行，知道遇到第一个真正的挂起点。
+
+## 注意事项：
+1. 创建协程作用域的时候要加supervisor() ，防止一个协程失败导致其他协程也失败。
+```
+    val coroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+```
+2. 在协程的finally 要做必须的事情的时候要在NonCancellable协程上下文做。
+```
+viewModelScope.launch {
+    try {
+
+    } catch (e: IOException)
+    withContext(NonCancellable) {
+       
+    }
+}
+```
+3. 不要try Catch所有的Exception，会导致协程不能取消。
+```
+viewModelScope.launch {
+    try {
+
+    } catch (e: Exception) {
+        if (e is CancellationException) throw e
+    }
+}
+```
+4. 要将Dispatcher 注入，不要写明使用哪个。
+5. 内置的suspend 函数才会响应cancellException，所以写文件时需要自己调用ensureActive()或者yield()。
+```
+viewModelScope.launch {
+    try {
+        ensureActive()
+    } catch (e: Exception) {
+        if (e is CancellationException) throw e
+    }
+}
+```
