@@ -36,6 +36,7 @@ proxies:
   - {"name":"cf-worker2","type":"vless","server":"47.243.203.119","port":2053,"uuid":"d342d11e-d424-4583-b36e-524ab1f0afa4","tls":true,"servername":"worker.xuniyishifanchen.link","network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"worker.xuniyishifanchen.link"}},"client-fingerprint":"randomized"}
   - {"name":"replit-vless","type":"vless","server":"69e11b1f-e015-401e-8200-2ff23b458a4b-00-2tekzckzhnwes.sisko.replit.dev","port":443,"uuid":"69e11b1f-e015-401e-8200-2ff23b458a4b","tls":true,"servername":"69e11b1f-e015-401e-8200-2ff23b458a4b-00-2tekzckzhnwes.sisko.replit.dev","network":"ws","ws-opts":{"path":"/69e11b1f-e015-401e-8200-2ff23b458a4b-vl","headers":{"host":"69e11b1f-e015-401e-8200-2ff23b458a4b-00-2tekzckzhnwes.sisko.replit.dev"}}}
   - {"name":"wireguard","type":"wireguard","server":"162.159.192.218","port":8886,"udp":true,"ip":"172.16.0.2","private-key":"SLYXlP9W2JLK4aZehWDiaH1PJKdea/qTP2sqtWxMi1Y=","public-key":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=","dns":["8.8.8.8","2001:4860:4860::8888"],"remote-dns-resolve":true}
+  - {"name":"节点2219","type":"hysteria","server":"146.0.36.114","port":64914,"ports":"30000-40000","auth_str":"dongtaiwang.com","alpn":["h3"],"sni":"www.bing.com","skip-cert-verify":true,"up":"11 Mbps","down":"55 Mbps"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -54,6 +55,7 @@ proxy-groups:
       - cf-worker2
       - replit-vless
       - wireguard
+      - 节点2219
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -72,6 +74,7 @@ proxy-groups:
       - cf-worker2
       - replit-vless
       - wireguard
+      - 节点2219
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -90,6 +93,7 @@ proxy-groups:
       - cf-worker2
       - replit-vless
       - wireguard
+      - 节点2219
   - name: 📲 电报信息
     type: select
     proxies:
@@ -107,6 +111,7 @@ proxy-groups:
       - cf-worker2
       - replit-vless
       - wireguard
+      - 节点2219
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -124,6 +129,7 @@ proxy-groups:
       - cf-worker2
       - replit-vless
       - wireguard
+      - 节点2219
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -141,6 +147,7 @@ proxy-groups:
       - cf-worker2
       - replit-vless
       - wireguard
+      - 节点2219
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -175,6 +182,7 @@ proxy-groups:
       - cf-worker2
       - replit-vless
       - wireguard
+      - 节点2219
 
 rules:
 # 本地/局域网地址
