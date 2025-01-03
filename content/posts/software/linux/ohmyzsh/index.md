@@ -40,7 +40,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 ```bash
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_MODE='awesome-fontconfig
+POWERLEVEL9K_MODE='awesome-fontconfig'
 ```
 
 ### 字体安装
