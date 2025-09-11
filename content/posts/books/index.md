@@ -22,3 +22,5 @@ categories: ["books"]
 1. [代码整洁之道](/pdf/代码整洁之道.pdf)
 1. [程序员的职业素养](/pdf/程序员的职业素养.pdf)
 1. [SwiftUI极简开发](/pdf/SwiftUI极简开发.pdf)
+1. [Android源码设计模式解析与实战](/pdf/Android源码设计模式解析与实战.pdf)
+1. [Android源码设计模式解析与实战epub](/pdf/Android源码设计模式解析与实战.epub)
