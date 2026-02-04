@@ -49,3 +49,28 @@ git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 ```
+
+### 修改配置文件
+替换~/.config/terminator/config文件
+```
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Fira Mono for Powerline Bold 17
+    foreground_color = "#839496"
+    show_titlebar = False
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
+
+```
