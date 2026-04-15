@@ -68,35 +68,35 @@ Simply paste the six folders into `~/.claude/skills/` and they'll be picked up a
 
 ## What Each Skill Does
 
-### android-module-structure
+### [android-module-structure](/android-module-structure)
 
 Defines the project-level blueprint: feature-layered modularization, Gradle convention plugins, version catalogs, and dependency rules. Claude will follow this structure whenever you ask it to create a new module, set up a project, or decide where code should live.
 
-### android-compose-ui
+### [android-compose-ui](/android-compose-ui)
 
 Defines the Jetpack Compose UI architecture rules for Android/KMP projects.
 
-### android-data-layer
+### [android-data-layer](/android-data-layer)
 
 Covers everything below the domain boundary: repository implementations, DTOs, Room entities and DAOs, Ktor `HttpClient` setup, safe-call helpers, token storage, offline-first patterns, and the shared `Result` / `DataError` types.
 
-### android-presentation-mvi
+### [android-presentation-mvi](/android-presentation-mvi)
 
 The MVI presentation layer pattern: a single `State` data class, a sealed `Action` interface, one-time `Event` side-effects via `Channel`, ViewModel wiring, the Root/Screen composable split, `UiText` error mapping, and process-death handling with `SavedStateHandle`.
 
-### android-navigation
+### [android-navigation](/android-navigation)
 
 Type-safe Compose Navigation using `@Serializable` route objects, one nav graph per feature, cross-feature navigation through callbacks, and assembly in the `:app` module.
 
-### android-di-koin
+### [android-di-koin](/android-di-koin)
 
 Koin dependency injection conventions: one module per feature layer, `single` / `viewModel` / `factory` scoping, assembling modules in `:app`, and injecting ViewModels in composables with `koinViewModel()`.
 
-### android-testing
+### [android-testing](/android-testing)
 
 Testing patterns and stack: JUnit 5 + AssertK + Turbine for ViewModel unit tests, `UnconfinedTestDispatcher`, fake repositories, `SavedStateHandle` testing, and Compose UI tests with `ComposeTestRule`.
 
-### android-error-handling
+### [android-error-handling](/android-error-handling)
 
 Defines a unified, typed error handling architecture for Android/KMP using a generic Result wrapper and sealed error hierarchies. 
 
